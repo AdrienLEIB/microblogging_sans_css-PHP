@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Miccroblogging - Page de Connexion- </title>
+</head>
+    <body align="center">
+        <h1>Formulaire de connexion</h1> 
+        <form method="POST" action="connexion.php" enctype="multipart/form-data" name='login' align="center">
+            <label>
+            	Pseudo :
+                <input type="text" name="pseudo">
+            </label>
+            <br />
+            <label >
+            	Mot de Passe :
+            	<input type="password" name="mdp">
+            </label>
+            <br />                        
+            <input type="submit" value="Se Connecter" />
+        </form>
+
+        <section>
+            <form method="POST" action="inscription.php" enctype="multipart/form-data" name='login' align="center">
+                <input type="submit" value="S'inscrire" />
+            </form>
+        </section>
+    </body>
+</html>

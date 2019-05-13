@@ -1,0 +1,112 @@
+
+ 
+
+Bonjour à tous,
+
+ 
+
+Vous trouverez ci-dessous le sujet du deuxième DM de développement PHP.
+
+ 
+
+Avant tout chose, comme pour le premier DM :
+
+- Cette évaluation a pour but de valider vos acquis en PHP.
+
+- Plagier le code de quelqu'un m'empêche de connaître votre niveau et ne vous permettra pas d'obtenir une note satisfaisante.
+
+- Si vous donnez votre code à quelqu'un, je ne pourrai pas déterminer qui a écrit le code le premier. De fait, vous n'aurez pas non plus de note satisfaisante.
+
+ 
+
+Vous travaillez pour une entreprise de communication, qui souhaite offrir à ses clients un service de microblogging. Ce service permettra aux utilisateurs de créer un compte, 
+et ensuite de poster des messages ou des liens sur leur profil. 
+Pour plus d'informations, n'hésitez pas à vous renseigner sur le sujet, par exemple via cette page : https://fr.wikipedia.org/wiki/Microblog
+
+ 
+
+Pour ce faire, vous nécessiterez les fonctionnalités suivantes :
+
+Pour les personnes non connectées :
+
+- Inscription sur le site par un pseudo (ou adresse email) et un mot de passe
+
+- Connexion d'un l'utilisateur
+
+- Afficher les posts d'un utilisateur
+
+Pour les personnes connectées :
+
+- Créer un de ses posts
+
+- Supprimer un de ses posts
+
+- Déconnexion d'un utilisateur
+
+ 
+
+Les données relatives à ce site (utilisateurs, posts) devront toutes être stockées en base de données.
+
+Votre entreprise vous a donné des informations complémentaires et des directives à suivre concernant ce projet :
+
+- La sécurité : Les mots de passe des utilisateurs doivent être stockés de manière chiffrée pour des raisons de sécurité.
+
+    A l'inscription de l'utilisateur, il faudra donc utiliser une fonction dédiée de PHP password_hash() sur le mot de passe avant de stocker celui-ci.
+
+    A la connexion de l'utilisateur, il faudra comparer le mot de passe "hashé" stocké en base avec le mot de passe que l'utilisateur vient d'entrer avec la fonction password_verify().
+
+    Pour plus d'informations concernant ces fonctions :
+
+        http://php.net/password_hashet http://php.net/password_verify
+
+- La sécurité encore : Les requêtes SQL devront être préparées afin d'éviter les injections SQL.
+
+    Pour rappel, nous utilisons pour cela PDO et les méthodes prepare() et execute(). Pour plus d'informations concernant ces méthodes :
+
+        http://php.net/manual/fr/pdo.prepare.php et http://php.net/manual/fr/pdostatement.execute.php
+
+- La programmation orientée objet : Pour faciliter la maintenabilité de l'application dans le temps, il vous faudra coder en POO.
+
+    Un utilisateur doit être constitué au minimum d'un id (identifiant unique), d'un nom d'utilisateur et d'un mot de passe.
+
+    Un post doit être constitué au minimum d'un id, d'un contenu et d'une date de création.
+
+    Vos tables de base de données devront être calquées sur la structure de vos classes, pour simplifier vos requêtes.
+
+ 
+
+Informations de notation :
+
+- Le système d'inscription, connexion et déconnexion vaudra pour environ un tiers des points.
+
+- La gestion des posts vaudra pour environ un tiers des points.
+
+- Le respect de la POO et la pertinence de vos classes vaudra pour environ un sixième des points.
+
+- Le respect des normes de sécurité vaudra pour environ un sixième des points.
+
+- Séparer le code PHP du code HTML via la fonction require et l'organisation du code (indentation, sauts de ligne, commentaires, etc) aura une influence sur la note que vous recevrez.
+
+ 
+
+Informations concernant cette évaluation :
+
+- Le rendu devra être fait avant le 4 avril à 23h59 (donc dans trois semaines).
+
+- Cette évaluation comptera pour un coefficient 2.
+
+- Merci d'envoyer votre rendu sur l'adresse mail renaud.berthier@ynov.com.
+
+ 
+
+Je vous conseille vivement de structurer votre réflexion et de prendre le temps de relire le sujet avant de vous plonger dans le développement.
+
+Je reste à disposition si vous avez des questions concernant la compréhension du sujet.
+
+Tous mes voeux de réussite.
+
+ 
+
+Cordialement,
+
+Renaud Berthier.
